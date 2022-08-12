@@ -1,0 +1,12 @@
+.grid {
+    display: grid;
+    height: 30vh;
+    width: 30vh;
+    grid-template-columns: repeat(var(--gridNumber), auto);
+    grid-template-rows: repeat(var(--gridNumber), auto);
+}
+.cell {
+    border: 1px solid black;
+    width: auto;
+    height: auto;
+}
