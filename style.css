@@ -1,12 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Bebas Neue', cursive;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.header {
+    background-color: #5899E2;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 5vh;
+    padding: 20px;
+}
+.header > p {
+    color: white;
+    font-size: 4rem;
+}
+
 .grid {
     display: grid;
-    height: 30vh;
-    width: 30vh;
+    height: 65vh;
+    width: 65vh;
     grid-template-columns: repeat(var(--gridNumber), auto);
     grid-template-rows: repeat(var(--gridNumber), auto);
 }
-.cell {
-    border: 1px solid black;
+
+.box {
+    border: 1px solid rgb(225, 225, 225);
     width: auto;
     height: auto;
+}
+.mousedown {
+    background-color: black;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 5vh;
+    gap: 20px;
+}
+#buttons > input {
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 10px;
+    color: white;
+    font-weight: 600;
+    font-size: 1.2rem;
+    padding: 10px;
+}
+
+#reset-grid-button {
+    background-color: #FE5F55;
+}
+#change-grid-button {
+    background-color: #2667FF;
 }

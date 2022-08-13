@@ -1,26 +1,34 @@
-// created a variable for finding the element with the container id.
+// gave the page container a variable.
 const container = document.querySelector('#container');
-
-// created the grid variable for housing the cells for the array of boxes.
-let grid = document.createElement('div');
+// created a grid variable to hold the grid cells in the webpage, and adding the class grid to the declared variable.
+const grid = document.createElement('div');
 grid.classList.add('grid');
 
-// user entered number to create a box with equal number of rows and columns.
-let number = window.prompt("enter a number: ");
-// copied the value of the number in a new variable, to take it as a reference in the later part of the code.
+// window prompt will ask the user for the number of boxes to be displayed.
+let number = window.prompt("Enter a random number");
 let gridNumber = number;
 
-// function to generate the grid based on the user input number.
+// function to create the grid
 function generateGrid (number) {
+// for loop to display an equal number of boxes, based on the user provided number.
     for (let i=1; i<=number*number; i++) {
-        let cell = document.createElement('div');
-        cell.classList.add('cell');
-        grid.appendChild(cell);
+        let box = document.createElement('div');
+        box.classList.add('box');
+        grid.appendChild(box);
     }
     container.appendChild(grid);
 }
 
-// this function acts when the window is loaded.
+// event listener to change the color of the box when hover
+grid.addEventListener (
+    'mousedown', function (e) {
+        if (e.target.matches('.box')) {
+            e.target.classList.add('mousedown');
+        }
+    }
+);
+
+// function to display the grid when the window is loaded.
 window.addEventListener (
     'load', () => {
         generateGrid(number);
@@ -28,3 +36,12 @@ window.addEventListener (
         grid.style.setProperty('--gridNumber', gridNumber);
     }
 )
+
+// function to reset the grid, removes the background color classes from the box after the mousedown event occurs.
+function resetGrid () {
+    while (grid.firstChild) {
+        grid.removeChild(grid.lastChild);
+    }
+    generateGrid(number);
+}
+
