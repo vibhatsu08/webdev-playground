@@ -4,3 +4,4 @@ playgroundLog[1.0] - In this log, i'll be working on the Etch a Sketch project. 
 playgroundLog[1.1] - Fixed the issue with grid not being limited to a fixed size and the boxes being of the same size, now, the user can enter any random number, and the actual size of the grid will remain the same, whereas the cells inside the grid, will change dynamically.
 playgroundLog[1.2] - Currently working the range based number input for the grid.
 playgroundLog[1.3] - Implemented the input type based number input, changes the style of the elements being placed around the screen. Fixed some bugs, and also added some UI changes.
+playgroundLog[1.4] - In this log, i am working on the color input to the grid functionality for the project.

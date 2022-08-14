@@ -6,12 +6,12 @@ const buttonsAndGrid = document.querySelector('#buttons-and-grid');
 const grid = document.createElement('div');
 grid.classList.add('grid');
 
-// window prompt will ask the user for the number of boxes to be displayed.
-let number = 16
+// number of boxes on each side, when will then later be number*number while creating the grid.
+let number;
 let gridNumber = number;
 
 // variable to store the user input value
-const userInput = document.querySelector('#quantity');
+const userInput = document.getElementById('quantity');
 
 // variable to call the reset button
 const resetButton = document.querySelector('#reset-grid-button');
