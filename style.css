@@ -1,119 +1,41 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-body {
-    font-family: 'Bebas Neue', cursive;
-}
-
-#container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.header {
-    background-color: #5899E2;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
-}
-.header > p {
-    color: white;
-    font-size: 4rem;
-}
-
-#buttons-and-grid {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10vw;
-    margin-top: 10vh
-}
-
-.grid {
-    display: grid;
-    height: 65vh;
-    width: 65vh;
-    grid-template-columns: repeat(var(--gridNumber), auto);
-    grid-template-rows: repeat(var(--gridNumber), auto);
-    box-shadow: 
-                0 1px 2px rgb(222, 222, 222),
-                0 2px 6px rgb(223, 223, 223),
-                0 4px 10px rgb(224, 224, 224),
-                0 8px 16px rgb(225, 225, 225),
-                0 16px 20px rgb(226, 226, 226);
-}
-
-.box {
-    border: 1px solid black;
-    width: auto;
-    height: auto;
-}
-.mousedown {
-    background-color: rgb(0, 0, 0);
-}
-
-#buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-bottom: 5vh;
-    gap: 20px;
-}
-#buttons > input[type=button] {
+.accordion {
+    background-color: #2E3138;
+    color: #FFF4EC;
     border: none;
-    border-radius: 10px;
-    color: white;
-    font-weight: 600;
-    font-size: 1.2rem;
-    padding: 10px;
-    transition: 0.3s all ease-in-out;
-}
-#buttons > input[type=button]:hover {
-    box-shadow: 
-                0 -1px 2px rgb(221, 221, 221),
-                0 1px 2px rgb(222, 222, 222),
-                0 2px 4px rgb(223, 223, 223),
-                0 4px 8px rgb(224, 224, 224),
-                0 8px 12px rgb(225, 225, 225),
-                0 16px 18px rgb(226, 226, 226);
-}
-
-#reset-grid-button {
-    background-color: #FE5F55;
-}
-
-#quantity, #quantity::placeholder {
-    text-align: center;
-    text-transform: uppercase;
-    font-weight: 600;
-    background-color: #7189FF;
-    color: white;
-    border: none;
-    font-size: 1.2rem;
     outline: none;
-    border-radius: 10000px;
-    padding: 10px 20px;
-    transition: 0.3s all ease-in-out;
+    width: 100vw;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    cursor: pointer;
+    font-weight: 500;
 }
-#quantity:focus,  #quantity:hover{
-    box-shadow: 
-                0 -1px 2px rgb(221, 221, 221),
-                0 1px 2px rgb(222, 222, 222),
-                0 2px 4px rgb(223, 223, 223),
-                0 4px 8px rgb(224, 224, 224),
-                0 8px 12px rgb(225, 225, 225),
-                0 16px 18px rgb(226, 226, 226);
+.panel {
+    display: none;
+    padding: 10px 20px;
+    background-color: #3F88C5;
 }
 
-#random-color-div {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
+.panel-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 1.5;
+}
+.panel-items > a {
+    text-decoration: none;
+    color: #FFF4EC;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.active, .accordion:hover {
+    background-color: black;
 }
