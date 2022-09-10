@@ -1,18 +1,30 @@
-let accordion = document.getElementsByClassName("accordion");
-let i;
+let books = [];
 
-for (i = 0; i < accordion.length; i++) {
-    accordion[i].addEventListener("click", function() {
-    /* Toggle between adding and removing the "active" class,
-    to highlight the button that controls the panel */
-    this.classList.toggle("active");
+function addBook (e) {
+    // to stop the form from submitting itself when the button is clicked
+    e.preventDefault();
 
-    /* Toggle between hiding and showing the active panel */
-    let panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-        panel.style.display = "none";
-    } else {
-        panel.style.display = "block";
+    // creating an object to store the information taken from the user input
+    let book = {
+        bookTitle: document.getElementById('bookTitle').value,
+        bookAuthor: document.getElementById('bookAuthor').value,
+        bookPages: document.getElementById('bookPages').value,
+        bookRead: document.getElementById('bookRead').value
     }
-  });
+    books.push(book);
+    document.getElementById('form').reset();
+
+    let para = document.querySelector(".para");
+    para.textContent = JSON.stringify(books, '\t', 2) + '\n';
+    console.warn('added', {books});
 }
+
+/*
+So what basically is happening here is, once the page's DOM is done loading, and when the button
+is clicked with it's event listener set to click, the button should call a function called 'addBook'.
+*/
+document.addEventListener (
+    "DOMContentLoaded", function () {
+        document.getElementById("btn").addEventListener("click", addBook);
+    }
+)

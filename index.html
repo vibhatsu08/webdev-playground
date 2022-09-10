@@ -6,41 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
-    <title>Accordion Menus</title>
+    <title>Book Library (Playground)</title>
 </head>
 <body>
-    <button class="accordion">about us</button>
-    <div class="panel">
-        <div class="panel-items">
-            <a href="#">our company</a>
-            <a href="#">our coffee</a>
-            <a href="#">stories and news</a>
-            <a href="#">starbucks archive</a>
-            <a href="#">investor relations</a>
-            <a href="#">customer service</a>
-        </div>
-    </div>
-    <button class="accordion">about us</button>
-    <div class="panel">
-        <div class="panel-items">
-            <a href="#">our company</a>
-            <a href="#">our coffee</a>
-            <a href="#">stories and news</a>
-            <a href="#">starbucks archive</a>
-            <a href="#">investor relations</a>
-            <a href="#">customer service</a>
-        </div>
-    </div>
-    <button class="accordion">about us</button>
-    <div class="panel">
-        <div class="panel-items">
-            <a href="#">our company</a>
-            <a href="#">our coffee</a>
-            <a href="#">stories and news</a>
-            <a href="#">starbucks archive</a>
-            <a href="#">investor relations</a>
-            <a href="#">customer service</a>
-        </div>
+    <div id="container">
+        <form id="form">
+            <input type="text" name="bookTitle" id="bookTitle" placeholder="book title">
+            <input type="text" name="bookAuthor" id="bookAuthor" placeholder="book author">
+            <input type="text" name="bookPages" id="bookPages" placeholder="book pages">
+            <input type="text" name="bookRead" id="bookRead" placeholder="book read">
+            <button id="btn">add</button>
+        </form>
+        <p class="para"></p>
     </div>
 </body>
 </html>
