@@ -10,3 +10,6 @@ playgroundLog[2.0] - In this log, i am working on trying to implement accordions
 playgroundLog[2.1] - In this log, i successfully implemented the accordion to house all the extra links, this can be used as a footer for small screen devices. </br>
 playgroundLog[3.0] - In this project log series, i will be working on creating a book library project, so all the features that i want to implement will be tested out over here, before it begin implemented to the final project in the other respective repo. </br>
 playgroundLog[3.1] - In this log, i am working on getting user input, and trying to store it as an object, which later will be pushed into an array...Completed</br>
+playgroundLog[4.0] - In this log, i'll be working on trying to make the mobile version for the project. </br> 
+playgroundLog[4.1] - Just realised in the active repo of the project, that i forgot to add a constraint for the buttons container in each task. Working on it now. </br>
+playgroundLog[4.2] - Fixed the bug, and also made the adjustments to make the project responsive, i.e., works on all screen sizes, the layout of the elements changes with the change in screen dimensions now. </br>
