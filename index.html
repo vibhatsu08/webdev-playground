@@ -6,18 +6,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="app.js" defer></script>
-    <title>Book Library (Playground)</title>
+    <title>Todo List project</title>
 </head>
 <body>
     <div id="container">
-        <form id="form">
-            <input type="text" name="bookTitle" id="bookTitle" placeholder="book title">
-            <input type="text" name="bookAuthor" id="bookAuthor" placeholder="book author">
-            <input type="text" name="bookPages" id="bookPages" placeholder="book pages">
-            <input type="text" name="bookRead" id="bookRead" placeholder="book read">
-            <button id="btn">add</button>
-        </form>
-        <p class="para"></p>
+        <div id="headerDiv">
+            <div id="logo">todo list</div>
+            <form id="addTaskDiv">
+                <input type="text" name="addTask" id="addTask" placeholder="add task" required>
+                <button id="addTaskButton">add task</button>
+            </form>
+            <div id="toggleDarkLightModeDiv">
+                <button id="toggleDarkLightModeButton">toggle view</button>
+            </div>
+        </div>
+        <div id="tasksContentParentDiv">
+            <div id="tasksDivHeader">your tasks</div>
+            <div id="tasksParentDiv">
+                <!-- <div class="task">
+                    <div class="taskText">task test 1</div>
+                    <div class="taskButtons">
+                        <button class="taskEditButton">edit</button>
+                        <button class="taskDoneButton">done</button>
+                        <button class="taskDeleteButton">delete</button>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="taskText">task test 2</div>
+                    <div class="taskButtons">
+                        <button class="taskEditButton">edit</button>
+                        <button class="taskDoneButton">done</button>
+                        <button class="taskDeleteButton">delete</button>
+                    </div>
+                </div>
+                <div class="task">
+                    <div class="taskText">task test 3</div>
+                    <div class="taskButtons">
+                        <button class="taskEditButton">edit</button>
+                        <button class="taskDoneButton">done</button>
+                        <button class="taskDeleteButton">delete</button>
+                    </div>
+                </div> -->
+            </div>
+        </div>
     </div>
 </body>
 </html>
