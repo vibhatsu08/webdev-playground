@@ -5,48 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
-    <title>Todo List project</title>
+    <script src="script.js" defer></script>
+    <title>Sticky notes website (playground)</title>
 </head>
 <body>
     <div id="container">
-        <div id="headerDiv">
-            <div id="logo">todo list</div>
-            <form id="addTaskDiv">
-                <input type="text" name="addTask" id="addTask" placeholder="add task" required>
-                <button id="addTaskButton">add task</button>
-            </form>
-            <div id="toggleDarkLightModeDiv">
-                <button id="toggleDarkLightModeButton">toggle view</button>
+        <div id="navbar">
+            <div id="navbar-logo">sticky notes (playground)</div>
+            <div id="navbar-buttons">
+                <button id="instructions-button">instructions</button>
+                <button id="new-note-type-button">new type</button>
             </div>
         </div>
-        <div id="tasksContentParentDiv">
-            <div id="tasksDivHeader">your tasks</div>
-            <div id="tasksParentDiv">
-                <!-- <div class="task">
-                    <div class="taskText">task test 1</div>
-                    <div class="taskButtons">
-                        <button class="taskEditButton">edit</button>
-                        <button class="taskDoneButton">done</button>
-                        <button class="taskDeleteButton">delete</button>
-                    </div>
+        <div id="notes-body">
+            <div class="notes-div">
+                <div class="notes-header-div">
+                    <div class="notes-header">example header</div>
+                    <button class="new-note-button">new note</button>
                 </div>
-                <div class="task">
-                    <div class="taskText">task test 2</div>
-                    <div class="taskButtons">
-                        <button class="taskEditButton">edit</button>
-                        <button class="taskDoneButton">done</button>
-                        <button class="taskDeleteButton">delete</button>
+                <div class="notes">
+                    <!-- <div class="note">
+                        <div class="note-text">
+                            random note text
+                        </div>
+                        <div class="note-buttons">
+                            <button class="note-edit-button">edit</button>
+                            <button class="note-done-button">done</button>
+                            <button class="note-delete-button">delete</button>
+                        </div>
                     </div>
+                    <div class="note">
+                        <div class="note-text">
+                            random note text
+                        </div>
+                        <div class="note-buttons">
+                            <button class="note-edit-button">edit</button>
+                            <button class="note-done-button">done</button>
+                            <button class="note-delete-button">delete</button>
+                        </div>
+                    </div> -->
                 </div>
-                <div class="task">
-                    <div class="taskText">task test 3</div>
-                    <div class="taskButtons">
-                        <button class="taskEditButton">edit</button>
-                        <button class="taskDoneButton">done</button>
-                        <button class="taskDeleteButton">delete</button>
-                    </div>
-                </div> -->
             </div>
         </div>
     </div>
