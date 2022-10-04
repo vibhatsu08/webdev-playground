@@ -5,228 +5,173 @@
     padding: 0;
     font-family: 'Poppins', sans-serif;
 }
+
 :root {
-    --containerBgColor: #31393C;
-    --headerDivBgColor: #2176FF;
-    --inputTaskDivBgColor: #31393C;
-    --inputTaskBgColor: #FAF0CA;
-    --inputTaskTxtColor: #31393C;
-    --logoBgColor: #31393C;
-    --logoTxtColor: #FAF0CA;
-    --addTaskButtonBgColor: #FFC857;
-    --addTaskButtonTxtColor: #31393C;
-    --toggleDarkLightModeBgColor: #F78154;
-    --toggleDarkLightModeTxtColor: #31393C;
-    --tasksDivHeaderTxtColor: #FAF0CA;
-    --taskDivBgColor: #FFC857;
-    --taskTxtBgColor: #31393C;
-    --taskTxtColor: #FAF0CA;
-    --taskButtonsBgColor: #31393C;
-    --doneTaskButtonTxtColor: #00A676;
-    --deleteTaskButtonTxtColor: #FC5130;
-    --editTaskButtonTxtColor: #256EFF;
+    --bodyBgcolor: #F6E8EA;
+    --navbarBgColor: #22181C;
+    --navbarLogoTxtColor: #F6E8EA;
+    --navbarInstructionsButtonBgColor: #312F2F;
+    --navbarInstructionsButtonTxtColor: #FFB400;
+    --navbarNewNoteTypeButtonBgColor: #312F2F;
+    --navbarNewNoteTypeButtonTxtColor: #F6E8EA;
+    --notesDivBgColor: #EEB4B3;
+    --notesHeaderBgColor: #312F2F;
+    --notesHeaderTxtColor: #EEB4B3;
+    --notesHeaderNewNoteButtonBgColor: #EF626C;
+    --notesHeaderNewNoteButtonTxtColor:  #312F2F;
+    --noteBgColor: #EF626C;
+    --noteTxtColor: #312F2F;
+    --noteButtonsBgColor: #312F2F;
+    --noteButtonsTxtColor: #EF626C;
 }
+
 body {
-    background-color: var(--containerBgColor);
+    background-color: var(--bodyBgcolor);
 }
+
 #container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    max-width: 100%;
+    height: 100%;
+    overflow: none;
 }
-#headerDiv {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-    width: 100vw;
-    background-color: var(--headerDivBgColor);
-    padding: 10px;
-    position: sticky;
-    top: 0;
-}
-#logo {
-    font-size: 1.8rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    background-color: var(--logoBgColor);
-    color: var(--logoTxtColor);
-    padding: 10px;
-    border-radius: 10px;
-}
-#addTaskDiv {
+
+#navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    width: 50%;
-    background-color: var(--inputTaskDivBgColor);
-    padding: 10px;
-    border-radius: 10px;
-    gap: 10px;
-}
-#addTask {
-    border: none;
-    outline: none;
-    width: 60%;
-    font-size: 1.3rem;
-    font-weight: 600;
-    padding: 10px;
-    border-radius: 10px;
-    background-color: var(--inputTaskBgColor);
-    color: var(--inputTaskTxtColor);
-}
-#addTask::placeholder {
-    color: var(--inputTaskTxtColor);
-    opacity: 0.7;
-    text-transform: capitalize;
-}
-#addTaskButton {
-    border: none;
-    outline: none;
-    width: 30%;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    background-color: var(--addTaskButtonBgColor);
-    cursor: pointer;
-    color: var(--addTaskButtonTxtColor);
+    gap: 20px;
     padding: 10px 20px;
-    border-radius: 10px;
+    background-color: var(--navbarBgColor);
 }
-#toggleDarkLightModeButton {
-    border: none;
-    outline: none;
-    font-size: 1.3rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    background-color: var(--toggleDarkLightModeBgColor);
-    color: var(--toggleDarkLightModeTxtColor);
-    cursor: pointer;
-    padding: 10px 20px;
-    border-radius: 10px;
-}
-#tasksDivHeader {
+#navbar-logo {
+    color: var(--navbarLogoTxtColor);
     font-size: 2rem;
     font-weight: 600;
     text-transform: capitalize;
-    color: var(--tasksDivHeaderTxtColor);
-    padding: 10px 20px;
 }
-#tasksParentDiv {
+#instructions-button {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.1s all ease-in-out;
+    background-color: var(--navbarInstructionsButtonBgColor);
+    color: var(--navbarInstructionsButtonTxtColor);
+}
+#instructions-button:hover {
+    border: 2px solid var(--navbarInstructionsButtonTxtColor);
+}
+#new-note-type-button {
+    border: none;
+    outline: none;
+    background-color: var(--navbarNewNoteTypeButtonBgColor);
+    color: var(--navbarNewNoteTypeButtonTxtColor);
+    padding: 10px 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.1s all ease-in-out;
+}
+#new-note-type-button:hover {
+    background-color: var(--navbarNewNoteTypeButtonTxtColor);
+    color: var(--navbarNewNoteTypeButtonBgColor);
+}
+
+#notes-body {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100vw;
-    gap: 3vh;
-    padding: 5vh 0vh;
+    padding: 10px;
+    gap: 20px;
 }
-.task {
+.notes-div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+    background-color: var(--notesDivBgColor);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100%;
+}
+.notes-header-div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: row;
-    background-color: var(--taskDivBgColor);
-    width: 60%;
-    border-radius: 10px;
-    padding: 10px;
-    gap: 20px;
-}
-.taskText {
-    font-size: 1.3rem;
-    font-weight: 500;
-    color: var(--taskTxtColor);
-    background-color: var(--inputTaskDivBgColor);
+    width: 100%;
+    background-color: var(--notesHeaderBgColor);
     padding: 10px;
     border-radius: 10px;
-    width: 60%;
 }
-.taskButtons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    flex-direction: row;
-    width: 40%;
-    gap: 10px;
-}
-.taskEditButton, .taskDoneButton, .taskDeleteButton {
+.notes-header {
+    color: var(--notesHeaderTxtColor);
     font-size: 1.3rem;
     font-weight: 500;
-    text-transform: uppercase;
-    padding: 10px 20px;
-    background-color: var(--taskButtonsBgColor);
-    cursor: pointer;
+    text-transform: capitalize;
+}
+.new-note-button {
     border: none;
     outline: none;
+    background-color: var(--notesHeaderNewNoteButtonBgColor);
+    color: var(--notesHeaderNewNoteButtonTxtColor);
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
     border-radius: 10px;
+    cursor: pointer;
 }
-.taskEditButton {
-    color: var(--editTaskButtonTxtColor);
+.notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
 }
-.taskDoneButton {
-    color: var(--doneTaskButtonTxtColor);
+.note {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: var(--noteBgColor);
+    color: var(--noteTxtColor);
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    min-width: 10vw;
+    min-height: 20vh;
+    transition: 0.1s all ease-in-out;
 }
-.taskDeleteButton {
-    color: var(--deleteTaskButtonTxtColor);
+.note:hover {
+    transform: scale(1.1);
 }
-
-@media only screen and (max-width: 1400px) {
-    .taskButtons {
-        flex-direction: column;
-    }
-    .taskEditButton, .taskDoneButton, .taskDeleteButton {
-        width: 100%;
-    }
+.note-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
 }
-@media only screen and (max-width: 1100px) {
-    #addTaskDiv {
-        flex-direction: column;
-    }
-    #addTask {
-        width: 100%;
-    }
-    #addTaskButton {
-        width: 100%;
-    }
-}
-@media only screen and (max-width: 850px) {
-    .task {
-        flex-direction: column;
-        width: 70%;
-    }
-    .taskText {
-        width: 100%;
-    }
-    .taskButtons {
-        width: 100%;
-    }
-    .taskEditButton, .taskDoneButton, .taskDeleteButton {
-        width: 100%;
-    }
-}
-@media only screen and (max-width: 800px) {
-    #headerDiv {
-        flex-direction: column;
-        gap: 10px;
-    }
-    #logo {
-        text-align: center;
-        font-size: 1.5rem;
-        width: 100%;
-    }
-    #addTaskDiv {
-        width: 100%;
-        background-color: var(--inputTaskDivBgColor);
-        padding: 10px;
-        border-radius: 10px;
-        gap: 10px;
-    }
-    #addTaskButton {
-        width: 100%;
-    }
-    #toggleDarkLightModeDiv , #toggleDarkLightModeButton {
-        width: 100%;
-    }
+.note-buttons > button {
+    border: none;
+    outline: none;
+    background-color: var(--noteButtonsBgColor);
+    color: var(--noteButtonsTxtColor);
+    font-size: 1rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }
