@@ -14,3 +14,4 @@ playgroundLog[4.0] - In this log, i'll be working on trying to make the mobile v
 playgroundLog[4.1] - Just realised in the active repo of the project, that i forgot to add a constraint for the buttons container in each task. Working on it now. </br>
 playgroundLog[4.2] - Fixed the bug, and also made the adjustments to make the project responsive, i.e., works on all screen sizes, the layout of the elements changes with the change in screen dimensions now. </br>
 playgroundLog[5.0] - In this playground log series, i will be working on trying to implement a pop up login form, instead of the traditional login form. Basically what will happen here, is that, when a particular button the form linked to that button will be opened. </br>
+playgroundLog[5.1] - Working on the instructions page modal, works as intended when the button is clicked. Now working on the styling of the instructions modal.</br>
