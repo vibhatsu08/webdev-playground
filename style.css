@@ -63,8 +63,22 @@ body {
     background-color: var(--navbarInstructionsButtonBgColor);
     color: var(--navbarInstructionsButtonTxtColor);
 }
-#instructions-button:hover {
-    border: 2px solid var(--navbarInstructionsButtonTxtColor);
+#instructions-login-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+}
+#instructions-form-popup {
+    /* display: none; */
+    position: fixed;
+    z-index: 10;
+}
+.form-container {
+    max-width: 300px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.531);
 }
 #new-note-type-button {
     border: none;
