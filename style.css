@@ -23,6 +23,16 @@
     --noteTxtColor: #312F2F;
     --noteButtonsBgColor: #312F2F;
     --noteButtonsTxtColor: #EF626C;
+
+    --modalBgColor: #355070;
+    --modalHeaderBgColor: #657ED4;
+    --modalHeaderTxtColor: #FBFBFF;
+    --newTypeModalInputBgColor: #B56576;
+    --newTypeModalInputTxtColor: #E7E7E7;
+    --modalDoneButtonBgColor: #EAC435;
+    --modalDoneButtonTxtColor: #312F2F;
+    --modalClearButtonBgColor: #485696;
+    --modalClearButtonTxtColor: #E7E7E7;
 }
 
 body {
@@ -62,23 +72,6 @@ body {
     transition: 0.1s all ease-in-out;
     background-color: var(--navbarInstructionsButtonBgColor);
     color: var(--navbarInstructionsButtonTxtColor);
-}
-#instructions-login-popup {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-}
-#instructions-form-popup {
-    /* display: none; */
-    position: fixed;
-    z-index: 10;
-}
-.form-container {
-    max-width: 300px;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, 0.531);
 }
 #new-note-type-button {
     border: none;
@@ -188,4 +181,91 @@ body {
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+}
+.modals-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+.modals {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+#new-type-modal {
+    background-color: var(--modalBgColor);
+    max-width: 40vw;
+    height: fit-content;
+}
+.modal-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 20px;
+}
+.modal-content-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+.modal-header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: var(--modalHeaderBgColor);
+    color: var(--modalHeaderTxtColor);
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+}
+#new-type-modal-input {
+    outline: none;
+    border: none;
+    width: 100%;
+    background-color: var(--newTypeModalInputBgColor);
+    color: var(--newTypeModalInputTxtColor);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 10px;
+    border-radius: 10px;
+}
+#new-type-modal-input::placeholder {
+    color: var(--newTypeModalInputTxtColor);
+    text-transform: capitalize;
+    opacity: 0.8;
+}
+.modal-content-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 100%;
+}
+.modal-done-button, .modal-clear-button {
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 10px;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.modal-done-button {
+    background-color: var(--modalDoneButtonBgColor);
+    color: var(--modalDoneButtonTxtColor);
+}
+.modal-clear-button {
+    background-color: var(--modalClearButtonBgColor);
+    color: var(--modalClearButtonTxtColor);
 }
