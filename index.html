@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="app.js" defer></script>
     <title>Sticky notes website (playground)</title>
 </head>
 <body>
@@ -13,18 +12,18 @@
         <div id="navbar">
             <div id="navbar-logo">sticky notes (playground)</div>
             <div id="navbar-buttons">
-                <button id="instructions-button" onclick="openForm()">instructions</button>
-                <button id="new-note-type-button">new type</button>
+                <button id="instructions-button">instructions</button>
+                <button id="new-note-type-button" data-model="new-type-modal" class="modal-buttons">new type</button>
             </div>
         </div>
         <div id="notes-body">
             <div class="notes-div">
                 <div class="notes-header-div">
                     <div class="notes-header">example header</div>
-                    <button class="new-note-button">new note</button>
+                    <button class="new-note-button modal-buttons" data-model="new-note-modal">new note</button>
                 </div>
                 <div class="notes"> 
-                    <!-- <div class="note">
+                    <div class="note">
                         <div class="note-text">
                             random note text
                         </div>
@@ -43,24 +42,35 @@
                             <button class="note-done-button">done</button>
                             <button class="note-delete-button">delete</button>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="modals-div">
-            <div id="new-type-modal" class="modals">
-                <div class="modal-content">
-                    <div class="modal-content-header">
-                        <div class="modal-header">new type</div>
-                        <input type="text" id="new-type-modal-input" placeholder="input type">
-                    </div>
-                    <div class="modal-content-buttons">
-                        <button class="modal-done-button">done</button>
-                        <button class="modal-clear-button">clear</button>
-                    </div>
+        <div id="new-type-modal" class="modals">
+            <div class="modal-content">
+                <div class="modal-content-header">
+                    <div class="modal-header">new type</div>
+                    <input type="text" id="new-type-modal-input" placeholder="input type">
+                </div>
+                <div class="modal-content-buttons">
+                    <button class="modal-done-button">done</button>
+                    <button class="modal-clear-button">clear</button>
+                </div>
+            </div>
+        </div>
+        <div id="new-note-modal" class="modals">
+            <div class="modal-content">
+                <div class="modal-content-header">
+                    <div class="modal-header">new note</div>
+                    <input type="text" id="new-note-modal-input" placeholder="input type">
+                </div>
+                <div class="modal-content-buttons">
+                    <button class="modal-done-button">done</button>
+                    <button class="modal-clear-button">clear</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="app.js"></script>
 </body>
 </html>
