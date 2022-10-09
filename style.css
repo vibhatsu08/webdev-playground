@@ -17,6 +17,8 @@
     --notesDivBgColor: #EEB4B3;
     --notesHeaderBgColor: #312F2F;
     --notesHeaderTxtColor: #EEB4B3;
+    --notesHeaderDeleteGroupButtonBgColor: #715AFF;
+    --notesHeaderDeleteGroupButtonTxtColor: #E7E7E7;
     --notesHeaderNewNoteButtonBgColor: #EF626C;
     --notesHeaderNewNoteButtonTxtColor:  #312F2F;
     --noteBgColor: #EF626C;
@@ -128,7 +130,7 @@ body {
     font-weight: 500;
     text-transform: capitalize;
 }
-.new-note-button {
+.new-note-button, .delete-group-button {
     border: none;
     outline: none;
     background-color: var(--notesHeaderNewNoteButtonBgColor);
@@ -139,6 +141,10 @@ body {
     text-transform: uppercase;
     border-radius: 10px;
     cursor: pointer;
+}
+.delete-group-button {
+    background-color: var(--notesHeaderDeleteGroupButtonBgColor);
+    color: var(--notesHeaderDeleteGroupButtonTxtColor);
 }
 .notes {
     display: flex;
