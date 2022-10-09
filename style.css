@@ -24,15 +24,17 @@
     --noteButtonsBgColor: #312F2F;
     --noteButtonsTxtColor: #EF626C;
 
-    --modalBgColor: #355070;
-    --modalHeaderBgColor: #657ED4;
+    --modalBgColor: #312F2F;
+    --modalHeaderBgColor: #007bff;
     --modalHeaderTxtColor: #FBFBFF;
-    --newTypeModalInputBgColor: #B56576;
+    --newTypeModalInputBgColor: #F25F5C;
     --newTypeModalInputTxtColor: #E7E7E7;
-    --modalDoneButtonBgColor: #EAC435;
+    --modalDoneButtonBgColor: #02C39A;
     --modalDoneButtonTxtColor: #312F2F;
-    --modalClearButtonBgColor: #485696;
-    --modalClearButtonTxtColor: #E7E7E7;
+    --modalClearButtonBgColor: #ffd117;
+    --modalClearButtonTxtColor: #312F2F;
+    --modalCloseButtonBgColor: #FF595E;
+    --modalCloseButtonTxtColor: #312F2F;
 }
 
 body {
@@ -191,9 +193,9 @@ body {
 .modals {
     display: none;
     position: fixed;
-    z-index: 10;
     top: 0;
     left: 0;
+    z-index: 10;
     width: 100%;
     height: 100%;
     padding: 10px;
@@ -253,7 +255,7 @@ body {
     gap: 10px;
     width: 100%;
 }
-.modal-done-button, .modal-clear-button {
+.modal-done-button, .modal-clear-button, .modal-close-button {
     border: none;
     outline: none;
     font-size: 1.4rem;
@@ -271,4 +273,15 @@ body {
 .modal-clear-button {
     background-color: var(--modalClearButtonBgColor);
     color: var(--modalClearButtonTxtColor);
+}
+.modal-close-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+.modal-close-button {
+    background-color: var(--modalCloseButtonBgColor);
+    color: var(--modalCloseButtonTxtColor);
 }
