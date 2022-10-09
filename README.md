@@ -16,3 +16,4 @@ playgroundLog[4.2] - Fixed the bug, and also made the adjustments to make the pr
 playgroundLog[5.0] - In this playground log series, i will be working on trying to implement a pop up login form, instead of the traditional login form. Basically what will happen here, is that, when a particular button the form linked to that button will be opened. </br>
 playgroundLog[5.1] - Working on the instructions page modal, works as intended when the button is clicked. Now working on the styling of the instructions modal.</br>
 playgroundLog[5.2] - Removed the instructions modal for now, and now working on the new type modal and the new note modal. </br>
+playgroundLog[5.3] - Removed the empty onclick calling of a function from the instructions button. Wrote the basic script for opening the modals linked to the respective buttons, with their data models, Learnt more about how data models work with the DOM. </br>
