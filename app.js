@@ -1,5 +1,6 @@
-let modalButtons = [...document.querySelectorAll(".modal-buttons")];
-modalButtons.forEach (
+// for opening and closing the modals
+let openModalButtons = [...document.querySelectorAll(".modal-buttons")];
+openModalButtons.forEach (
     function (button) {
         button.onclick = function () {
             let modal = button.getAttribute("data-model");
@@ -7,8 +8,8 @@ modalButtons.forEach (
         }
     }
 );
-let closeButtons = [...document.querySelectorAll(".modal-close-button")]
-closeButtons.forEach (
+let closeModalButtons = [...document.querySelectorAll(".modal-close-button")]
+closeModalButtons.forEach (
     function (button) {
         button.onclick = function () {
             let modal = button.closest(".modals");
