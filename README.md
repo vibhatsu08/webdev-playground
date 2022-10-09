@@ -18,3 +18,4 @@ playgroundLog[5.1] - Working on the instructions page modal, works as intended w
 playgroundLog[5.2] - Removed the instructions modal for now, and now working on the new type modal and the new note modal. </br>
 playgroundLog[5.3] - Removed the empty onclick calling of a function from the instructions button. Wrote the basic script for opening the modals linked to the respective buttons, with their data models, Learnt more about how data models work with the DOM. </br>
 playgroundLog[5.4] - Working on adding the close buttons to each modal, for that particular modal when the button is clicked. Added the styling for the close buttons, changed the color palette for the modals, now they match with the overall look of the page. Wrote the script for the close buttons.</br>
+playgroundLog[5.5] - Now working on the DOM part of the website. Where the elements are not hard coded into the HTML file. </br>
