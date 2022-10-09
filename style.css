@@ -189,14 +189,17 @@ body {
     padding: 10px;
 }
 .modals {
+    display: none;
     position: fixed;
     z-index: 10;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     padding: 10px;
     border-radius: 10px;
 }
-#new-type-modal {
+#new-type-modal, #new-note-modal {
     background-color: var(--modalBgColor);
     max-width: 40vw;
     height: fit-content;
@@ -226,7 +229,7 @@ body {
     padding: 10px;
     border-radius: 10px;
 }
-#new-type-modal-input {
+#new-type-modal-input, #new-note-modal-input {
     outline: none;
     border: none;
     width: 100%;
@@ -237,7 +240,7 @@ body {
     padding: 10px;
     border-radius: 10px;
 }
-#new-type-modal-input::placeholder {
+#new-type-modal-input::placeholder, #new-note-modal-input::placeholder {
     color: var(--newTypeModalInputTxtColor);
     text-transform: capitalize;
     opacity: 0.8;
