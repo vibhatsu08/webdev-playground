@@ -21,3 +21,5 @@ playgroundLog[5.4] - Working on adding the close buttons to each modal, for that
 playgroundLog[5.5] - Now working on the DOM part of the website. Where the elements are not hard coded into the HTML file. </br>
 playgroundLog[5.6] - Working on writing the script for adding the note groups into the DOM. Also learnt about using document fragments in the DOM to avoid DOM reflow. </br>
 playgroundLog[5.7] - Aiming to complete this project by today, successfully completed adding the function for creating the note groups, and also wrote the script for delete a particular group when the delete button of that button is clicked. </br>
+playgroundLog[5.8] - In this log, i will be working on being able to add the note groups via the inputs. </br>
+playgroundLog[5.9] - All this time, i was maintaining an array to store the note group elements, it worked upto a certain extent. Now, i'll be trying to store the elements directly into the DOM, instead of taking the elements and creating an array and storing in it. </br>
